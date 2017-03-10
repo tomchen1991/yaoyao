@@ -23,6 +23,7 @@ function draw(Obj) {
   var a=document.createElement("tr");
   a.className="characters";
   a.appendChild(createTd(Obj.name));
+  a.firstChild.className="charaName";
   a.appendChild(createTd(Obj.Hp));
   a.appendChild(createTd(Obj.Atk));
   a.appendChild(createTd(Obj.Sht));
@@ -81,3 +82,20 @@ downTri[4].onclick=function(){
   sortUp("All",true);
 }
 //降序
+var newChara=document.getElementsByClassName("newChara");
+var addChara=document.getElementById("getIn");
+addChara.onclick=function(){
+  var a=new character(newChara[0].value,parseInt(newChara[1].value),parseInt(newChara[2].value),parseInt(newChara[3].value),parseInt(newChara[4].value));
+  charaList.push(a);
+  draw(a);
+}
+table.ondblclick=function(e) {
+  e= e||window.event;
+  t=e.target||e.srcElement;
+  if(t.className=="charaName")     table.removeChild(t.parentNode);
+  for(var i=0;i<charaList.length;i++) {
+    if(charaList[i].name!=document.getElementsByClassName("charaName")[i].innerText) {
+      charaList.splice(i,1); break;
+    }
+  }
+}

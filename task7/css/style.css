@@ -11,6 +11,9 @@ td {
   position:relative;
   text-align:center;
 }
+.charaName {
+  border:1px solid black;
+}
 .properties {
   color:white;  
   background-color:#444;
@@ -39,4 +42,8 @@ td {
 }
 .characters {
   color:black;
+}
+.newChara {
+  width:80px;
+  margin:10px;
 }
