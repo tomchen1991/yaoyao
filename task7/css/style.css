@@ -1,0 +1,42 @@
+#charas {
+   border:1px solid grey;
+   border-collapse:collapse;
+   font-weight:bold;
+}
+td {
+  border:1px solid gray;
+  height:30px;
+  width:100px;
+  padding:5px;
+  position:relative;
+  text-align:center;
+}
+.properties {
+  color:white;  
+  background-color:#444;
+}
+.upTri {  
+  width:0;
+  height:0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 6px solid;
+  margin:5px;
+  position:absolute;
+  right:6px;
+  top: 6px;
+}
+.downTri {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid;
+  margin:5px;
+  position:absolute;
+  right:6px;
+  bottom:6px;
+}
+.characters {
+  color:black;
+}
